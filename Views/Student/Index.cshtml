@@ -1,0 +1,28 @@
+﻿@model ViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Students</h1>
+
+<ul>
+    @foreach (Student item in Model.Students)
+    {
+        <li style="color:Red">Student Full Name:<a href="/student/detail/@item.Id"> @item.FullName </a> 
+            Student Point: <span style="color:blue">@item.Point</span> </li>
+            <br />
+    }
+</ul>
+<br />
+<br />
+
+<h1>Groups</h1>
+
+<ul>
+    @foreach (Group item in Model.Groups)
+    {
+        <li style="color:Red">  Group Name: <span style="color:blue">@item.Name</span> </li>
+        <br />
+    }
+
+</ul>
